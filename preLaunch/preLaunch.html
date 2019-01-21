@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Door3</title>
+    
     <style>
         html{
             background-color: white;
@@ -14,7 +15,6 @@
         @font-face {
             font-family: 'engebrechtreexpanded';
             src: url('engebrechtre ex.ttf'); 
-                
             font-weight: normal;
             font-style: normal;
         }
@@ -23,9 +23,9 @@
             position: absolute;
             color: #7B1600;
             font-family: 'engebrechtreexpanded';
-            font-size: 50px;
-            left: 55%;
-            top: 45%;
+            font-size: 3rem;
+            left: 53%;
+            top: 40%;
         }
         #logo{
             position:absolute;
@@ -34,16 +34,16 @@
         #left{
             width: 30%;
             position: absolute;
-            top: 100px;
-            left: 470px;
+            top: 15%;
+            left: 35%;
             transition: transform 5s;
             transform-origin: left;
         }
         #right{
             width: 30%;
             position: absolute;
-            top: 100px;
-            right: 45px;
+            top: 15%;
+            right: 5%;
             transition: transform 5s;
             transform-origin: right;
 
@@ -51,23 +51,27 @@
         
         .nav ul{
             list-style: none;
-            float:left;
             position: absolute;
             bottom:0;
+            left:0;
             margin:0 auto;
             padding:0;
             width: 100%;
-            background: rgba(228, 123, 131, 0.5);
-            height: 60px;
+            background: rgba(128, 0, 0, 1);
+            height: 9%;
         }
 
         .nav ul li{
             float: left; 
-            width: 32%;
+            width: 25%;
         }
-
+        .nav ul li:hover{
+            background-color: palevioletred;
+            opacity: 0.6;
+            transition: 0.4s ease-in;
+        }
         .nav ul li button{
-            padding:10px;
+            padding: 2%;
             width:100%;
             background-color: transparent;
             color: white;
@@ -78,17 +82,12 @@
             text-align: center;
         }
 
-
-        .nav ul li button:hover{
-            background-color: rgba(205,92,92,0.7);
-            transition: 0.8s;
-        }
     </style>
 </head>
-<body>
+<body onresize="onResize()">
     <div>
         <img id="logo" src="logo.png" width="20%">
-        <p>Coming soon...</p>
+        <p id="cs">Coming soon...</p>
         <img id="left" src="leftGate.png" width="20%">
         <img id="right" src="rightGate.png" width= "20%">
         
@@ -96,9 +95,10 @@
 
     <nav class="nav">
         <ul>
-            <li> <button id="about">About</button> </li>
-            <li> <button id="rules">Rules</button> </li>
-            <li> <button id="contacts">Contacts</button> </li>
+            <li> <button onclick="location.href='index.html'" id="home">Home</button> </li>
+            <li> <button onclick="location.href='About.html'" id="about">About</button> </li>
+            <li> <button onclick="location.href='Rules.html'" id="rules">Rules</button> </li>
+            <li> <button onclick="location.href='Contact.html'" id="contacts">Contacts</button> </li>
         </ul>
     </nav>
 </body>
@@ -121,5 +121,15 @@
         left.style.transform = "scale(1, 1)";
         right.style.transform = "scale(1, 1)";
     }
+    function onResize() {
+        var left = document.getElementById('left');
+        var cs = document.getElementById('cs');
+        var height = left.getAttribute('top');
+        console.log(height);
+        cs.style.fontSize = window.innerHeight * 0.05 + 'px';
+        cs.style.position = "absolute";
+        cs.style.top = (height + 30) + '%';
+    }
+    
 </script>
 </html>
