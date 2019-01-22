@@ -4,85 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Door3</title>
-    
-    <style>
-        html{
-            background-color: white;
-            margin:0;
-            overflow: hidden;
-        }
-        @font-face {
-            font-family: 'engebrechtreexpanded';
-            src: url('engebrechtre ex.ttf'); 
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        div p{
-            position: absolute;
-            color: #7B1600;
-            font-family: 'engebrechtreexpanded';
-            font-size: 3rem;
-            left: 53%;
-            top: 40%;
-        }
-        #logo{
-            position:absolute;
-            top: -20px;
-        }
-        #left{
-            width: 30%;
-            position: absolute;
-            top: 15%;
-            left: 35%;
-            transition: transform 5s;
-            transform-origin: left;
-        }
-        #right{
-            width: 30%;
-            position: absolute;
-            top: 15%;
-            right: 5%;
-            transition: transform 5s;
-            transform-origin: right;
-
-        } 
-        
-        .nav ul{
-            list-style: none;
-            position: absolute;
-            bottom:0;
-            left:0;
-            margin:0 auto;
-            padding:0;
-            width: 100%;
-            background: rgba(128, 0, 0, 1);
-            height: 9%;
-        }
-
-        .nav ul li{
-            float: left; 
-            width: 25%;
-        }
-        .nav ul li:hover{
-            background-color: palevioletred;
-            opacity: 0.6;
-            transition: 0.4s ease-in;
-        }
-        .nav ul li button{
-            padding: 2%;
-            width:100%;
-            background-color: transparent;
-            color: white;
-            border:none;
-            text-decoration: none;
-            font-family: 'engebrechtreexpanded';
-            font-size: 30px;
-            text-align: center;
-        }
-
-    </style>
+    <title>PreLaunch</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body onresize="onResize()">
     <div>
@@ -95,10 +18,10 @@
 
     <nav class="nav">
         <ul>
-            <li> <button onclick="location.href='index.html'" id="home">Home</button> </li>
-            <li> <button onclick="location.href='About.html'" id="about">About</button> </li>
-            <li> <button onclick="location.href='Rules.html'" id="rules">Rules</button> </li>
-            <li> <button onclick="location.href='Contact.html'" id="contacts">Contacts</button> </li>
+            <li> <button onclick="location.href='preLaunch.html'" id="home">Home</button> </li>
+            <li> <button onclick="location.href='about.html'" id="about">About</button> </li>
+            <li> <button onclick="location.href='rules.html'" id="rules">Rules</button> </li>
+            <li> <button onclick="location.href='contact.html'" id="contacts">Contacts</button> </li>
         </ul>
     </nav>
 </body>
